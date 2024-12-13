@@ -7,7 +7,7 @@
 - In another way we called ES6 as the vanilla Javascript.
 - Node JS is the run time environment of javascript. 
 
-Variable :- 
+## Variable :- 
 
 - Variable is a container to store some data.
 - In javascript there are 3 types of variable are there.
@@ -33,7 +33,7 @@ Rules for creating variable name :-
 - reserved words cannot be a variable name. 
 ex. for, while, var , let, this, boolean etc... 
 
-Datatype in Javascript :- 
+## Datatype in Javascript :- 
 
 - datatypes is an attributes associated with a peice of data that tells a computer system how to interprit its value. 
 - in datatype we used "typeof" operator to know what type of data it is. 
@@ -80,7 +80,7 @@ let hari = {
 
 - in the above example left side element are the keys & right side elements are the values of that key. 
 
-3. Function :- 
+## 3. Function :- 
 
 - in function, we repeatedlly do the task in a function.
 - function reduce our code complexity and time & space complexity.
@@ -97,7 +97,7 @@ function calling ->
 
 my_schedule();
 
-Operator in JS :- 
+## Operator in JS :- 
 
 - operator are the key features to do some task or operate some task.
 - ex. A + B
@@ -129,7 +129,7 @@ F  T   T
 F  F   F  
 
 
-conditional statement :- 
+## Conditional statement :- 
 
 - to implement some condition in the code. 
 - there are 3 types of conditional statements are there
@@ -168,7 +168,7 @@ if (condition){
     statement
 }
 
-practice task :- 
+### practice task :- 
 
 write a code which can give grades to student according to their score. 
 1. 80-100 (A)
@@ -177,7 +177,7 @@ write a code which can give grades to student according to their score.
 4. 50-59 (D)
 5. 0-49 (fail - go for aganwadi)
 
-Loops in Javascript :- 
+## Loops in Javascript :- 
 
 - loop are used to execute a piece of code again & again.
 - there are 5 types of loop are there..
@@ -234,7 +234,7 @@ do {
 5. For-In Loop :- it iterate on objects
 
 
-String in Javascript :- 
+## String in Javascript :- 
 
 - Basically String is a sequence of character used to represent text. 
 - create a string -> let str = "web bocket".
@@ -256,7 +256,7 @@ Escape symbol in String :-
 1. \n -> new line
 2. \t -> new tab
 
-String Method in Javascript :- 
+## String Method in Javascript :- 
 
 1. str.toUpperCase()
 2. str.toLowerCase()
@@ -267,7 +267,7 @@ String Method in Javascript :-
 7. str.replaceAll(oldVal, newVal) -> its change all the old value
 8. str.charAt(idx)
 
-Array in Javascript :- 
+## Array in Javascript :- 
 
 - Array is a collection of items.
 - ex. let heros = ["iron man", "bat man", "spyder man"]
@@ -282,7 +282,7 @@ for (let i = 0; i < arr.length; i++){
     statement
 }
 
-practice question :- 
+### Practice question :- 
 
 1. for a given array with marks of students -> [89,76,45,90,38,93]. find the average marks of the entire class. 
 2. for a given array with price of 5 items -> [768,987,456,765,345]. all items have an offer of 10% off of them. change the array to store final price after applying offer. 
