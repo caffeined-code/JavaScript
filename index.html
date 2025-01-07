@@ -3,24 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript</title>
+  <title>JavaScript Tutorial</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
       margin: 20px;
-      background-color: #f4f4f9;
+    }
+    section {
+      margin-bottom: 30px;
     }
     h1, h2 {
       color: #007bff;
     }
-    section {
-      margin-bottom: 40px;
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border: 1px solid #ddd;
+      overflow-x: auto;
     }
     button {
-      padding: 10px 15px;
+      padding: 5px 10px;
       background-color: #007bff;
-      color: #fff;
+      color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -34,194 +39,151 @@
       padding: 10px;
       border-radius: 5px;
       border: 1px solid #ccc;
-      white-space: pre-wrap;
-    }
-    pre {
-      background: #282c34;
-      color: #033644;
-      padding: 15px;
-      border-radius: 5px;
-      overflow-x: auto;
-    }
-    code {
-      font-family: monospace;
     }
   </style>
 </head>
 <body>
-  <h1>Advanced JavaScript Tutorial</h1>
+  <h1>JavaScript Tutorial</h1>
 
-  <!-- 1. Basics -->
+  <!-- 1. Introduction -->
   <section>
-    <h2>1. Basics: Variables, Data Types, and Operators</h2>
-    <p>Click the button to see examples of variables and data types in the console.</p>
-    <button onclick="showBasics()">Show Basics</button>
-    <pre class="output" id="basics-output"></pre>
+    <h2>1. Introduction</h2>
+    <p>Click the button below to see a simple JavaScript example.</p>
+    <button onclick="changeText()">Click Me</button>
+    <p id="intro-output" class="output">JavaScript can change this text!</p>
     <script>
-      function showBasics() {
-        let name = "JavaScript";
-        const year = 1995;
-        var popularity = true;
-
-        let output = `Name: ${name}\nYear: ${year}\nPopular: ${popularity}\n\n`;
-
-        let x = 10, y = 5;
-        output += `Arithmetic: x + y = ${x + y}, x * y = ${x * y}\n`;
-        output += `Comparison: x > y = ${x > y}, x === y = ${x === y}\n`;
-        output += `Logical: (x > y && y < 10) = ${x > y && y < 10}`;
-
-        document.getElementById("basics-output").innerText = output;
+      function changeText() {
+        document.getElementById("intro-output").innerText = "Text changed by JavaScript!";
       }
     </script>
   </section>
 
-  <!-- 2. Functions and Scope -->
+  <!-- 2. Variables and Data Types -->
   <section>
-    <h2>2. Functions and Scope</h2>
-    <p>Click to see examples of functions, closures, and scope.</p>
-    <button onclick="demonstrateFunctions()">Run Functions</button>
-    <pre class="output" id="functions-output"></pre>
+    <h2>2. Variables and Data Types</h2>
+    <p>Check the console for variable declarations and data types.</p>
+    <pre>
+      let name = "John";
+      const age = 30;
+      var city = "New York";
+    </pre>
+    <button onclick="logVariables()">Run Code</button>
+    <script>
+      function logVariables() {
+        let name = "John";
+        const age = 30;
+        var city = "New York";
+        console.log("Name:", name);
+        console.log("Age:", age);
+        console.log("City:", city);
+      }
+    </script>
+  </section>
+
+  <!-- 3. Operators -->
+  <section>
+    <h2>3. Operators</h2>
+    <p>Check the console for operator demonstrations.</p>
+    <button onclick="demonstrateOperators()">Run Code</button>
+    <script>
+      function demonstrateOperators() {
+        let x = 5, y = 2;
+        console.log("x + y =", x + y);
+        console.log("x - y =", x - y);
+        console.log("x * y =", x * y);
+        console.log("x / y =", x / y);
+        console.log("x % y =", x % y);
+      }
+    </script>
+  </section>
+
+  <!-- 4. Control Structures -->
+  <section>
+    <h2>4. Control Structures</h2>
+    <p>Click the button to see conditional statements in action.</p>
+    <button onclick="controlStructures()">Run Code</button>
+    <script>
+      function controlStructures() {
+        let age = 20;
+        if (age >= 18) {
+          console.log("Adult");
+        } else {
+          console.log("Minor");
+        }
+
+        console.log("For Loop:");
+        for (let i = 0; i < 5; i++) {
+          console.log(i);
+        }
+      }
+    </script>
+  </section>
+
+  <!-- 5. Functions -->
+  <section>
+    <h2>5. Functions</h2>
+    <p>Click the button to run the function examples.</p>
+    <button onclick="demonstrateFunctions()">Run Code</button>
     <script>
       function demonstrateFunctions() {
-        // Regular Function
         function greet(name) {
-          return `Hello, ${name}`;
+          return `Hello, ${name}!`;
         }
+        const add = (a, b) => a + b;
 
-        // Closure Example
-        function counter() {
-          let count = 0;
-          return function () {
-            return ++count;
-          };
-        }
-        let increment = counter();
-
-        // Arrow Function
-        const multiply = (a, b) => a * b;
-
-        let output = `${greet("Developer")}\n`;
-        output += `Counter: ${increment()}, ${increment()}, ${increment()}\n`;
-        output += `Multiply 3 and 4: ${multiply(3, 4)}`;
-
-        document.getElementById("functions-output").innerText = output;
+        console.log(greet("Alice"));
+        console.log("Sum:", add(3, 4));
       }
     </script>
   </section>
 
-  <!-- 3. Arrays and Objects -->
+  <!-- 6. DOM Manipulation -->
   <section>
-    <h2>3. Arrays and Objects</h2>
-    <p>Click to manipulate arrays and objects.</p>
-    <button onclick="manipulateData()">Run Data Manipulation</button>
-    <pre class="output" id="data-output"></pre>
+    <h2>6. DOM Manipulation</h2>
+    <p>Click the button to change the content of the paragraph below.</p>
+    <button onclick="domManipulation()">Change Text</button>
+    <p id="dom-output" class="output">Original text</p>
     <script>
-      function manipulateData() {
-        // Arrays
-        let fruits = ["Apple", "Banana", "Cherry"];
-        fruits.push("Date");
-        fruits.splice(1, 1); // Remove "Banana"
-
-        // Objects
-        let person = {
-          name: "Alice",
-          age: 30,
-          greet: function () {
-            return `Hello, my name is ${this.name}`;
-          },
-        };
-
-        // Output
-        let output = `Fruits: ${fruits.join(", ")}\n`;
-        output += `Person: ${JSON.stringify(person)}\n`;
-        output += `${person.greet()}`;
-
-        document.getElementById("data-output").innerText = output;
+      function domManipulation() {
+        document.getElementById("dom-output").innerText = "Text changed using DOM manipulation!";
       }
     </script>
   </section>
 
-  <!-- 4. DOM Manipulation -->
+  <!-- 7. Arrays -->
   <section>
-    <h2>4. DOM Manipulation</h2>
-    <p>Click to change the content and style dynamically.</p>
-    <button onclick="manipulateDOM()">Manipulate DOM</button>
-    <div id="dom-output" class="output">Original Content</div>
+    <h2>7. Arrays</h2>
+    <p>Check the console for array operations.</p>
+    <button onclick="demonstrateArrays()">Run Code</button>
     <script>
-      function manipulateDOM() {
-        const output = document.getElementById("dom-output");
-        output.innerHTML = "Content updated with JavaScript!";
-        output.style.color = "green";
-        output.style.fontWeight = "bold";
+      function demonstrateArrays() {
+        let fruits = ["Apple", "Banana", "Mango"];
+        fruits.push("Orange");
+        console.log("Fruits after push:", fruits);
+        fruits.pop();
+        console.log("Fruits after pop:", fruits);
       }
     </script>
   </section>
 
-  <!-- 5. Promises and Fetch -->
+  <!-- 8. Fetch API -->
   <section>
-    <h2>5. Promises and Fetch API</h2>
-    <p>Click to fetch data from an API.</p>
+    <h2>8. Fetch API</h2>
+    <p>Click the button to fetch data from an API.</p>
     <button onclick="fetchData()">Fetch Data</button>
-    <pre class="output" id="fetch-output"></pre>
+    <pre id="fetch-output" class="output"></pre>
     <script>
       async function fetchData() {
-        const output = document.getElementById("fetch-output");
         try {
-          const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
-          const data = await response.json();
-          output.innerText = JSON.stringify(data, null, 2);
+          let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+          let data = await response.json();
+          document.getElementById("fetch-output").innerText = JSON.stringify(data, null, 2);
         } catch (error) {
-          output.innerText = `Error: ${error.message}`;
+          console.error(error);
         }
       }
     </script>
   </section>
 
-  <!-- 6. Classes and ES6 Features -->
-  <section>
-    <h2>6. Classes and ES6 Features</h2>
-    <p>Click to see classes and ES6 features in action.</p>
-    <button onclick="useClasses()">Run Classes</button>
-    <pre class="output" id="class-output"></pre>
-    <script>
-      function useClasses() {
-        class Animal {
-          constructor(name, sound) {
-            this.name = name;
-            this.sound = sound;
-          }
-          speak() {
-            return `${this.name} says ${this.sound}`;
-          }
-        }
-        const dog = new Animal("Dog", "Woof");
-        const cat = new Animal("Cat", "Meow");
-
-        document.getElementById("class-output").innerText = `
-          Dog: ${dog.speak()}
-          Cat: ${cat.speak()}
-        `;
-      }
-    </script>
-  </section>
-
-  <!-- 7. Async/Await -->
-  <section>
-    <h2>7. Async/Await</h2>
-    <p>Click to see async/await in action.</p>
-    <button onclick="demoAsync()">Run Async/Await</button>
-    <pre class="output" id="async-output"></pre>
-    <script>
-      async function demoAsync() {
-        const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-        const output = document.getElementById("async-output");
-
-        output.innerText = "Waiting for 2 seconds...";
-        await delay(2000);
-
-        output.innerText = "Done!";
-      }
-    </script>
-  </section>
 </body>
 </html>
